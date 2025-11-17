@@ -45,6 +45,7 @@ const Home = () => {
                   "Node.js",
                   "Express.js",
                   "Python",
+                  "Django",
                   "MongoDB",
                   "PostgreSQL",
                 ].map((tech) => (

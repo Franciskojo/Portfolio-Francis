@@ -9,7 +9,7 @@ const About = () => {
     {
       category: 'Backend Development',
       icon: <FaServer />,
-      items: ['Node.js', 'Express.js', 'RESTful APIs', 'Authentication', 'Database Design']
+      items: ['Node.js', 'Python', 'Express.js', 'Django', 'RESTful APIs', 'Authentication', 'Database Design']
     },
     {
       category: 'Frontend Development',
