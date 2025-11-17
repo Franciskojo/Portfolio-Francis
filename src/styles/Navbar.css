@@ -1,0 +1,143 @@
+/* src/components/Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 0;
+  transition: var(--transition);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.nav-logo:hover {
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.nav-toggle:hover {
+  color: var(--text-light);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: var(--bg-light);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: var(--shadow);
+    padding: 2rem 0;
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 2rem;
+    display: block;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-container {
+    padding: 0 15px;
+  }
+}
+
+/* Scroll effect */
+.navbar.scrolled {
+  background: rgba(10, 25, 47, 0.98);
+  box-shadow: var(--shadow);
+}

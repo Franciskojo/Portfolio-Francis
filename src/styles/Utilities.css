@@ -1,0 +1,130 @@
+/* src/styles/Utilities.css */
+/* Text utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-primary { color: var(--primary-color); }
+.text-light { color: var(--text-light); }
+.text-secondary { color: var(--text-secondary); }
+
+/* Spacing utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+.p-5 { padding: 3rem; }
+
+/* Flex utilities */
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-center { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-wrap { flex-wrap: wrap; }
+.flex-grow { flex-grow: 1; }
+
+/* Grid utilities */
+.grid { display: grid; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Visibility utilities */
+.hidden { display: none; }
+.visible { display: block; }
+
+@media (max-width: 768px) {
+  .hidden-mobile { display: none; }
+}
+
+@media (min-width: 769px) {
+  .hidden-desktop { display: none; }
+}
+
+/* Card component */
+.card {
+  background: var(--bg-light);
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: rgba(100, 255, 218, 0.3);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+/* Section spacing */
+.section {
+  padding: 5rem 0;
+}
+
+.section-sm {
+  padding: 3rem 0;
+}
+
+.section-lg {
+  padding: 8rem 0;
+}
+
+/* Container variations */
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-lg {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Loading states */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Error states */
+.error-message {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  margin: 1rem 0;
+}
+
+.success-message {
+  background: rgba(100, 255, 218, 0.1);
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  margin: 1rem 0;
+}
